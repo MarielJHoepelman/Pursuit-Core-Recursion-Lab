@@ -51,6 +51,23 @@ Write a function called `sumEvens` that takes in an array of numbers as an argum
 ```js
 sumEvens([2, 3, 5, 6]); // returns 8
 sumEvens([10, 5, 1, 2, 12]); //returns 24
+
+func sumEvens(_ array: [Int]) -> Int {
+    var copiedArray = array
+    guard !copiedArray.isEmpty else {
+    return 0
+    }
+    var firstNumber = copiedArray.removeFirst()
+    if firstNumber % 2 != 0 {
+        firstNumber = 0
+    }
+    //    print(firstNumber)
+    //    print(copiedArray)
+    return sumEvens(copiedArray) + firstNumber
+
+}
+sumEvens([2, 3, 5, 6])
+sumEvens([10, 5, 1, 2, 12])
 ```
 
 - ### Recursive range
