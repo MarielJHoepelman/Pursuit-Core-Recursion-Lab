@@ -9,6 +9,12 @@ input: 6
 output: 21
 
 //21 = 6 + 5 + 4 + 3 + 2 + 1
+
+func recursiveSumOfNums(num: Int) -> Int {
+    if num == 0 { return num }
+    return num + recursiveSumOfNums(num: num - 1)
+}
+recursiveSumOfNums(num: 6)
 ```
 
 
