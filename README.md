@@ -25,6 +25,14 @@ Write a function called `multArr` that takes in an array of numbers as an argume
 ```js
 multArr([2, 3, 5]); // returns 30
 multArr([5, 5, 1, 2]); //returns 50
+
+func multArr(_ array: [Int]) -> Int {
+    //base case
+    if array.count == 1 {return array[0]}
+    //resursive call
+    return array[0] * multArr(Array(array[1...]))
+}
+multArr([2, 3, 5])
 ```
 
 - ### Concatenate array
