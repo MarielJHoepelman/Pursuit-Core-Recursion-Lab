@@ -77,6 +77,17 @@ Write a function called `range` which takes in two numbers (num1, num2) as argum
 ```js
 range(2,10); // returns [2, 3, 4, 5, 6,7, 8, 9, 10]
 range(17,20); // returns [17, 18, 19, 20]
+
+func range(num1: Int, num2: Int) -> [Int] {
+    if num2 - num1 == 0
+        return [num1]
+    }else{
+        var list = range(num1: num1, num2: num2 - 1)
+        list.append(num2)
+        return list
+    }
+}
+print(range(num1: 17, num2: 20))
 ```
 
 
